@@ -1,4 +1,6 @@
 
+:: NEEDS TO BE TESTED
 
-NET STOP TELNET				              ::Terminates TELNET function
-NET STOP “MICROSOFT FTP SERVICE”		::Terminates FTP function
+FOR /F "delims==" %%G IN (disableServices.txt) DO net stop %%G
+
+:: create disableServices.txt file, include TELNET and "MICROSOFT FTP SERVICE"
