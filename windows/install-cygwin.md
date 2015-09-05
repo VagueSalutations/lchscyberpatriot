@@ -29,7 +29,7 @@ cd c:\Users\Public
 edit runme.cmd
 ```
 
-Copy the text below, right-click the Command Prompt window , save, and exit:
+Copy the text below, right-click the Command Prompt window title bar, choose `Edit...Paste`
 
 ```
 setup-x86.exe ^
@@ -39,6 +39,9 @@ setup-x86.exe ^
 --packages ^
 openssh, wget, perl, python, curl, rsync, git
 ```
+
+* `Alt-F, s` to save
+* `Alt-F, x` to exit
 
 Run the runme.cmd
 
