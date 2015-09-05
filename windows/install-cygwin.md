@@ -75,14 +75,23 @@ Right-click Cygwin on Desktop and choose `Run as administrator`
 $ ssh-host-config
 ```
 > `*** Query: Should StrictModes be used? (yes/no)` **`yes`** 
+
 > `*** Query: Should privilege separation be used? (yes/no)` **`yes`** 
+
 > `*** Query: new local account 'sshd'? (yes/no)` **`yes`** 
+
 > `*** Query: Do you want to install sshd as a service?` **`yes`** 
+
 > `*** Query: (Say "no" if it is already installed as a service) (yes/no)` **`yes`** 
+
 > `*** Query: Enter the value of CYGWIN for the daemon: []` **`binmode ntsec`** 
+
 > `*** Query: Do you want to use a different name? (yes/no)` **`no`** 
+
 > `*** Query: Create new privileged user account 'WIN-TVOA4G8I3DH\cyg_server' (Cygwin name: 'cyg_server')? (yes/no)` **`yes`** 
+
 > `*** Query: Please enter the password:` **`Passw0rd!`** 
+
 > `*** Query: Reenter:` **`Passw0rd!`** 
 
 ## start sshd server
