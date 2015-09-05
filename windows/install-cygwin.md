@@ -55,11 +55,15 @@ runme.cmd
 edit c:\cygwin\cygwin.bat
 ```
 
-Add before final bash line, save, and exit:
+* Move your cursor to the line immediately before the final bash line.
+* Copy the text below, right-click the Command Prompt window title bar, choose `Edit...Paste`
 
 ```
 set CYGWIN=binmode ntsec
 ```
+
+* `Alt-F, s` to save
+* `Alt-F, x` to exit
 
 # start cygwin terminal as administrator
 
