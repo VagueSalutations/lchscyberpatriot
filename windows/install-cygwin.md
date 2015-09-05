@@ -1,24 +1,36 @@
 # install cygwin
 
 ## set bridged networking in vmware fusion
+* In VMware Fusion (but not inside the VM)
+	* type `Command-E`
+	* choose "Network Adapter"
+	* choose Bridged Networking - Autodetect
 * Choose 'Work' network when prompted in image
 
 ## open powershell (no need admin)
 
+Start Menu...type Powershell...choose `Windows PowerShell` from the list
+
+Copy the text below, right-click your PowerShell window, and hit `enter`
+
 ```
 cd c:\Users\Public
 $client = new-object System.Net.WebClient
-$client.DownloadFile( "http://cygwin.org/setup-x86.exe", "setup-x86.exe" )
+$client.DownloadFile( "http://cygwin.org/setup-x86.exe", "c:\Users\Public\setup-x86.exe" )
 ```
 
 ## open command prompt as administrator
+
+Start Menu...type Command Prompt...right-click `Command Prompt` in list and choose `Run as administrator`
+
+Copy the text below, right-click the Command Prompt window, and choose `Paste`
 
 ```
 cd c:\Users\Public
 edit runme.cmd
 ```
 
-Paste text block, save, and exit:
+Copy the text below, right-click the Command Prompt window , save, and exit:
 
 ```
 setup-x86.exe ^
@@ -27,6 +39,12 @@ setup-x86.exe ^
 --root c:\cygwin ^
 --packages ^
 openssh, wget, perl, python, curl, rsync, git
+```
+
+Run the runme.cmd
+
+```
+runme.cmd
 ```
 
 ## edit cygwin.bat file
