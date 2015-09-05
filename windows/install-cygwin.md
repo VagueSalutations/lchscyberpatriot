@@ -14,7 +14,6 @@ Start Menu...type Powershell...choose `Windows PowerShell` from the list
 Copy the text below, right-click your PowerShell window, and hit `enter`
 
 ```
-cd c:\Users\Public
 $client = new-object System.Net.WebClient
 $client.DownloadFile( "http://cygwin.org/setup-x86.exe", "c:\Users\Public\setup-x86.exe" )
 ```
