@@ -1,15 +1,16 @@
 # install cygwin
 
 ## set bridged networking in vmware fusion
+
 * In VMware Fusion (but not inside the VM)
 	* type `Command-E`
-	* choose "Network Adapter"
-	* choose Bridged Networking - Autodetect
-* Choose 'Work' network when prompted in image
+	* choose **"Network Adapter"**
+	* choose **"Bridged Networking"** - **"Autodetect"**
+* Choose **"Work"** network when prompted in image
 
 ## open powershell (no need admin)
 
-Start Menu...type Powershell...choose `Windows PowerShell` from the list
+Start Menu...type `Powershell`...choose **"Windows PowerShell"** from the list
 
 Copy the text below, right-click your PowerShell window, and hit `enter`
 
@@ -20,16 +21,16 @@ $client.DownloadFile( "http://cygwin.org/setup-x86.exe", "c:\Users\Public\setup-
 
 ## open command prompt as administrator
 
-Start Menu...type Command Prompt...right-click `Command Prompt` in list and choose `Run as administrator`
+Start Menu...type `Command Prompt`...right-click **"Command Prompt"** in list and choose **"Run as administrator"**
 
-Copy the text below, right-click the Command Prompt window, and choose `Paste`
+Copy the text below, right-click the **"Command Prompt"** window, and choose **"Paste"**
 
 ```
 cd c:\Users\Public
 edit runme.cmd
 ```
 
-Copy the text below, right-click the Command Prompt window title bar, choose `Edit...Paste`
+Copy the text below, right-click the **"Command Prompt"** window title bar, choose **"Edit...Paste"**
 
 ```
 setup-x86.exe ^
@@ -40,10 +41,10 @@ setup-x86.exe ^
 openssh,wget,perl,python,curl,rsync,git
 ```
 
-* `Alt-F, s` to save
-* `Alt-F, x` to exit
+* Type `Alt-F, s` to save
+* Type `Alt-F, x` to exit
 
-Run the runme.cmd
+Run the `runme.cmd`
 
 ```
 runme.cmd
@@ -56,23 +57,29 @@ edit c:\cygwin\cygwin.bat
 ```
 
 * Move your cursor to the line immediately before the final bash line.
-* Copy the text below, right-click the Command Prompt window title bar, choose `Edit...Paste`
+* Copy the text below, right-click the **"Command Prompt"** window title bar, choose **"Edit...Paste"**
 
 ```
 set CYGWIN=binmode ntsec
 ```
 
-* `Alt-F, s` to save
-* `Alt-F, x` to exit
+* Type `Alt-F, s` to save
+* Type `Alt-F, x` to exit
 
-# set password for CyberPatriot user
+# [Win 7] set password for CyberPatriot user
+
 * Passw0rd!
 
-# start cygwin terminal as administrator
+# [Win 7] start cygwin terminal as administrator
 
-Right-click Cygwin on Desktop and choose `Run as administrator`
+* Right-click **"Cygwin Terminal"** on Desktop and choose **"Run as administrator"**
 
-## configure sshd (Windows 7)
+# [Win 2008] start cygwin terminal as administrator
+
+* Click **"Start Menu...All Programs...Cygwin"**
+* Right-click **"Cygwin Terminal"** and choose **"Run as administrator"**
+
+## [Win 7] configure sshd
 
 ```
 $ ssh-host-config
@@ -97,7 +104,7 @@ $ ssh-host-config
 
 > `*** Query: Reenter:` **`Passw0rd!`**
 
-## configure sshd (Windows 2008)
+## [Win 2008] configure sshd
 
 ```
 $ ssh-host-config
