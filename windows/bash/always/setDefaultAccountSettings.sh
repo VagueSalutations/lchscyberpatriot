@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # set standard windos account settings
 net accounts /forcelogoff:60 /minpwlen:8 /maxpwage:90 /minpwage:1 /lockoutthreshold:4 /lockoutwindow:4 /lockoutduration:4
 
