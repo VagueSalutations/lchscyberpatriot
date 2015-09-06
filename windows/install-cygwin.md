@@ -8,63 +8,27 @@
 	* choose **"Bridged Networking"** - **"Autodetect"**
 * Choose **"Work"** network when prompted in image
 
-## open powershell (no need admin)
+## open powershell as administrator
 
-Start Menu...type `Powershell`...choose **"Windows PowerShell"** from the list
+Start Menu...type `Powershell`...right-click **"Windows PowerShell"** in list and choose **"Run as administrator"**
 
 Copy the text below, right-click your PowerShell window, and hit `enter`
 
 ```
 $client = new-object System.Net.WebClient
 $client.DownloadFile( "http://cygwin.org/setup-x86.exe", "c:\Users\Public\setup-x86.exe" )
+
+Add-Content c:\Users\Public\runme.cmd "`nsetup-x86.exe ^"
+Add-Content c:\Users\Public\runme.cmd "`--quiet-mode ^"
+Add-Content c:\Users\Public\runme.cmd "`--site http://mirrors.kernel.org/sourceware/cygwin/ ^"
+Add-Content c:\Users\Public\runme.cmd "`--root c:\cygwin ^"
+Add-Content c:\Users\Public\runme.cmd "`--packages ^"
+Add-Content c:\Users\Public\runme.cmd "`openssh,wget,perl,python,curl,rsync,git"
+
+cmd /c c:\Users\Public\runme.cmd
+
+(gc c:\cygwin\cygwin.bat) -replace "bash --login -i", "set CYGWIN=binmode ntsec`r`nbash --login -i" | sc c:\cygwin\cygwin.bat
 ```
-
-## open command prompt as administrator
-
-Start Menu...type `Command Prompt`...right-click **"Command Prompt"** in list and choose **"Run as administrator"**
-
-Copy the text below, right-click the **"Command Prompt"** window, and choose **"Paste"**
-
-```
-cd c:\Users\Public
-edit runme.cmd
-```
-
-Copy the text below, right-click the **"Command Prompt"** window title bar, choose **"Edit...Paste"**
-
-```
-setup-x86.exe ^
---quiet-mode ^
---site http://mirrors.kernel.org/sourceware/cygwin/ ^
---root c:\cygwin ^
---packages ^
-openssh,wget,perl,python,curl,rsync,git
-```
-
-* Type `Alt-F, s` to save
-* Type `Alt-F, x` to exit
-
-Run the `runme.cmd`
-
-```
-runme.cmd
-```
-
-## edit cygwin.bat file
-
-```
-edit c:\cygwin\cygwin.bat
-```
-
-* Move your cursor to the line immediately before the final bash line.
-* Copy the text below, right-click the **"Command Prompt"** window title bar, choose **"Edit...Paste"**
-
-```
-set CYGWIN=binmode ntsec
-```
-
-* Type `Alt-F, s` to save
-* Type `Alt-F, x` to exit
 
 # [Win 7] set password for CyberPatriot user
 
