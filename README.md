@@ -24,8 +24,8 @@ chmod 600 ~/.ssh/*
 	* Windows 2008
 		- `ssh cyg_server@ip-address -i ~/.ssh/cyberpatriot`
 * Everyone copies the README and Scored Questions locally
-	- `scp CyberPatriot@ip-address:/cygdrive/c/Users/CyberPatriot/Desktop/README* ~/Desktop/`
-	- `scp CyberPatriot@ip-address:/cygdrive/c/Users/CyberPatriot/Desktop/Scored* ~/Desktop/`
+	- `scp -i ~/.ssh/cyberpatriot CyberPatriot@ip-address:/cygdrive/c/Users/CyberPatriot/Desktop/README* ~/Desktop/`
+	- `scp -i ~/.ssh/cyberpatriot CyberPatriot@ip-address:/cygdrive/c/Users/CyberPatriot/Desktop/Scored* ~/Desktop/`
 
 # doing the work
 * assign someone to the scored questions
