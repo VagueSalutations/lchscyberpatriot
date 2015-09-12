@@ -19,6 +19,7 @@ $client = new-object System.Net.WebClient
 $client.DownloadFile( "http://cygwin.org/setup-x86.exe", "c:\Users\Public\setup-x86.exe" )
 
 Remove-Item c:\Users\Public\runme.cmd
+Add-Content c:\Users\Public\runme.cmd "`ncd c:\Users\Public"
 Add-Content c:\Users\Public\runme.cmd "`nsetup-x86.exe ^"
 Add-Content c:\Users\Public\runme.cmd "`--quiet-mode ^"
 Add-Content c:\Users\Public\runme.cmd "`--site http://mirrors.kernel.org/sourceware/cygwin/ ^"
