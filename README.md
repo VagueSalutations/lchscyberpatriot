@@ -32,13 +32,13 @@ chmod 600 ~/.ssh/*
 * assign someone to run the "always run" scripts
 	- `ssh CyberPatriot@ip-address -i ~/.ssh/cyberpatriot`
 	- `mkdir "myname"; cd "myname"`
-	- `git clone <http URL>`
+	- `git clone https://github.com/VagueSalutations/lchscyberpatriot.git`
 	- `cd windows/bash/always`
 	- run the scripts
 * assign a person to work on each "sometimes" scripts
 	- `ssh CyberPatriot@ip-address -i ~/.ssh/cyberpatriot`
 	- `mkdir "myname"; cd "myname"`
-	- `git clone <http URL>`
+	- `git clone https://github.com/VagueSalutations/lchscyberpatriot.git`
 	- `cd windows/bash/sometimes`
 	- run the scripts
 	- every person gets one script at a time
