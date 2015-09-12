@@ -23,6 +23,11 @@ cp gitconfig ~/.gitconfig
 # doing the work
 * assign someone to the scored questions
 * assign someone to run the "always run" scripts
+	- ssh in
+	- `mkdir "myname"; cd "myname"`
+	- `git clone <http URL>`
+	- `cd windows/bash/always`
+	- run the scripts
 * assign someone to work on each "sometimes" scripts
 * assign someone to dig for any manual stuff
 	- add/remove programs + deleting files, etc - custom scripting
