@@ -10,9 +10,12 @@ cp gitconfig ~/.gitconfig
 * Open up VM on "primary" laptop, and install cygwin
 	- See: <https://github.com/VagueSalutations/lchscyberpatriot/blob/master/windows/install-cygwin.md>
 	- Announce the ip address to everyone
-		- `ipconfig -a`
+		- `ipconfig /all`
 * Everyone connects over ssh
-	- `ssh cyg_server@ip-address`
+	- Windows 7
+		- `ssh CyberPatriot@ip-address`
+	* Windows 2008
+		- `ssh cyg_server@ip-address`
 * Everyone copies the README and Scored Questions locally
 	- `scp cyg_server@ip-address:/cygdrive/c/Users/Desktop.../README* .`
 	- `scp cyg_server@ip-address:/cygdrive/c/Users/Desktop.../Scored* .`
