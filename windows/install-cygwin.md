@@ -34,7 +34,7 @@ cmd /c c:\Users\Public\runme.cmd
 
 # [Win 7] set password for CyberPatriot user
 
-* Passw0rd!
+* net user CyberPatriot Passw0rd!
 
 # [Win 7] start cygwin terminal as administrator
 
