@@ -23,12 +23,21 @@ cp gitconfig ~/.gitconfig
 # doing the work
 * assign someone to the scored questions
 * assign someone to run the "always run" scripts
-	- ssh in
+	- `ssh CyberPatriot@ip-address`
 	- `mkdir "myname"; cd "myname"`
 	- `git clone <http URL>`
 	- `cd windows/bash/always`
 	- run the scripts
-* assign someone to work on each "sometimes" scripts
+* assign a person to work on each "sometimes" scripts
+	- `ssh CyberPatriot@ip-address`
+	- `mkdir "myname"; cd "myname"`
+	- `git clone <http URL>`
+	- `cd windows/bash/sometimes`
+	- run the scripts
+	- every person gets one script at a time
+		+ every person should have their own git clone, but you can share if you're working together
+	- when you finish your script, you can move on to the next unassigned one
+		+ or help out the guy who it is assigned to
 * assign someone to dig for any manual stuff
 	- add/remove programs + deleting files, etc - custom scripting
 
