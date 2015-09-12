@@ -17,8 +17,8 @@ cp gitconfig ~/.gitconfig
 	* Windows 2008
 		- `ssh cyg_server@ip-address`
 * Everyone copies the README and Scored Questions locally
-	- `scp cyg_server@ip-address:/cygdrive/c/Users/Desktop.../README* .`
-	- `scp cyg_server@ip-address:/cygdrive/c/Users/Desktop.../Scored* .`
+	- `scp cyg_server@ip-address:/cygdrive/c/Users/CyberPatriot/Desktop/README* .`
+	- `scp cyg_server@ip-address:/cygdrive/c/Users/CyberPatriot/Desktop/Scored* .`
 
 # doing the work
 * assign someone to the scored questions
