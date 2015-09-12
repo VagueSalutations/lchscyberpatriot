@@ -6,6 +6,13 @@ Once you've cloned this in the windows box:
 cp gitconfig ~/.gitconfig
 ```
 
+When you've cloned this on your macbook:
+
+```
+cp cyberpatriot ~/.ssh/
+chmod 600 ~/.ssh/*
+```
+
 # first things first
 * Open up VM on "primary" laptop, and install cygwin
 	- See: <https://github.com/VagueSalutations/lchscyberpatriot/blob/master/windows/install-cygwin.md>
@@ -13,9 +20,9 @@ cp gitconfig ~/.gitconfig
 		- `ipconfig /all`
 * Everyone connects over ssh
 	- Windows 7
-		- `ssh CyberPatriot@ip-address`
+		- `ssh CyberPatriot@ip-address -i ~/.ssh/cyberpatriot`
 	* Windows 2008
-		- `ssh cyg_server@ip-address`
+		- `ssh cyg_server@ip-address -i ~/.ssh/cyberpatriot`
 * Everyone copies the README and Scored Questions locally
 	- `scp CyberPatriot@ip-address:/cygdrive/c/Users/CyberPatriot/Desktop/README* ~/Desktop/`
 	- `scp CyberPatriot@ip-address:/cygdrive/c/Users/CyberPatriot/Desktop/Scored* ~/Desktop/`
@@ -23,13 +30,13 @@ cp gitconfig ~/.gitconfig
 # doing the work
 * assign someone to the scored questions
 * assign someone to run the "always run" scripts
-	- `ssh CyberPatriot@ip-address`
+	- `ssh CyberPatriot@ip-address -i ~/.ssh/cyberpatriot`
 	- `mkdir "myname"; cd "myname"`
 	- `git clone <http URL>`
 	- `cd windows/bash/always`
 	- run the scripts
 * assign a person to work on each "sometimes" scripts
-	- `ssh CyberPatriot@ip-address`
+	- `ssh CyberPatriot@ip-address -i ~/.ssh/cyberpatriot`
 	- `mkdir "myname"; cd "myname"`
 	- `git clone <http URL>`
 	- `cd windows/bash/sometimes`

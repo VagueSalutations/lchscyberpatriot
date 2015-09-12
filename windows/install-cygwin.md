@@ -105,7 +105,20 @@ cygrunsrv -S sshd
 netsh advfirewall firewall add rule name="sshd" dir=in action=allow protocol=TCP localport=22
 ```
 
-## test local ssh
+## setup shared key access
+```
+mkdir ~/.ssh; chmod 700 ~/.ssh
+echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQavlw6H+P5/a65KAiQOomPEzObI17AVTC4lbX2qDWui/zSV8j6WO+nps0vTw2gHWgoliBOjNE60ZXYxcbeGPwu5QWSFtgB/NI1Y3weZvSLT/sre15fiL+YEV+ggjtpOAdmF+bER8fGEXhM6IvyJdmKMPtVgvHypHVb9GaotIYi4c5+uqnXHxk9tCc5e+kCQNayiX3kkJUeJNFGpDHx3aDj40Ro/wIStI6ZxUNUmwBsRLdSxumsF4HySx6PvSwleXp04MMex9Xgm9JU0gURmJcGGsEKJlYt07A10jvwvCw4s0ef+xcsPJaSXgK0PyWo1DrJySC6/OcixWX6XKKGMPP >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/*
+```
+
+## [Win 7] test local ssh
+```
+ssh CyberPatriot@localhost
+# enter 'Passw0rd!' when prompted
+```	
+
+## [Win 2008] test local ssh
 ```
 ssh cyg_server@localhost
 # enter 'Passw0rd!' when prompted
